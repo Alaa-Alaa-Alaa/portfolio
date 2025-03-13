@@ -573,7 +573,7 @@ section {
   
   /* الجهة الخلفية مع تحسين تنسيق النص */
   .card-back {
-    background: var(--main-color);
+    background: var(--second-bg-color);
     color: var(--bg-color);
     transform: rotateY(180deg);
     display: flex;
@@ -582,20 +582,25 @@ section {
     align-items: center;
     padding: 2rem;
     text-align: center;
+    border: .2rem solid var(--main-color);
+    border-radius: 1rem;
   }
+
   
   .card-back h3 {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
+    color: var(--main-color);
   }
   
   .card-back p {
     font-size: 1.1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
     letter-spacing: 0.5px;
+    color: var(--white-color);
   }
   
   /* قائمة التقنيات */
@@ -608,11 +613,11 @@ section {
   }
   
   .tech-stack span {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: var(--main-color);
     padding: 0.4rem 0.8rem;
     border-radius: 1rem;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
   
@@ -629,14 +634,14 @@ section {
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     border-radius: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     transition: background 0.3s;
     background: var(--bg-color);
-    color: var(--main-color);
+    color: var(--white-color);
   }
   
   .project-links a:hover {
-    background: var(--second-bg-color);
+    background: var(--main-color);
   }
   
   /* استجابة الشاشات الصغيرة */
