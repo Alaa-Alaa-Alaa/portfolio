@@ -91,7 +91,7 @@ section {
   }
   .home-detail {
     max-width: 800px;
-    padding-top: 9rem;
+    padding-top: 10rem;
   }
   .home-detail h1 {
     font-size: clamp(3.5rem, 10vw, 5.5rem);
@@ -401,6 +401,16 @@ section {
     margin-bottom: 1rem;
 }
 
+
+.resume-item .namecert {
+    color: var(--main-color);
+    font-size:2rem;
+    margin-bottom: 1rem;
+    /* text-align: center; */
+}
+
+
+
 .resume-item h3 {
     font-size: 2rem;
     color: var(--white-color);
@@ -642,20 +652,6 @@ section {
   
   .project-links a:hover {
     background: var(--main-color);
-  }
-  
-  /* استجابة الشاشات الصغيرة */
-  @media (max-width: 768px) {
-    .card {
-      height: 300px;
-    }
-    .card-front-overlay h3,
-    .card-back h3 {
-      font-size: 1.6rem;
-    }
-    .portfolio .heading {
-      font-size: 2.4rem;
-    }
   }
   
 
