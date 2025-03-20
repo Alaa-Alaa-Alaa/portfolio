@@ -1,47 +1,696 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Responsive Personal Portfolio Website Using HTML CSS & JavaScript | Codehal</title>
-    <!-- boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Alaa Alfarraj</title>
+  <!-- boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <!-- header -->
+  <header>
+    <a href="#home" class="logo">Alaa.</a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-    <!-- header -->
-     <header>
-        <a href="#home" class="logo">Alaa.</a>
+  <!-- home section -->
+  <section class="home" id="home">
+    <div class="home-detail">
+      <h1>Alaa Alfarraj</h1>
+      <h2>I'm a <span id="typed-text"></span></h2>
+      <p>
+        I am a programmer, graphic designer, cybersecurity specialist, and video
+        editor. My diverse skill set allows me to approach projects with a unique
+        perspective, combining technical precision with artistic vision to create
+        impactful digital experiences.
+      </p>
+      <div class="btn-sci">
+        <div class="sci">
+          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+          <a href="#"><i class="bx bxl-discord-alt"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <i class="bx bx-menu" id="menu-icon"></i>
+  <!-- services section -->
+  <section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, aut! Deleniti ut impedit quibusdam nam?</p>
+      </div>
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-palette"></i>
+        </div>
+        <h3>Graphic design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
+      </div>
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-slideshow"></i>
+        </div>
+        <h3>Video Editing</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
+      </div>
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-camera"></i>
+        </div>
+        <h3>Photography</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
+      </div>
+    </div>
+  </section>
 
-        <nav>
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#resume" class="nav-link">Resume</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-     </header>
+  <!-- resume section -->
+  <section class="resume" id="resume">
+    <h2 class="heading">My <span>Resume</span></h2>
+    <div class="resume-container">
+      <div class="resume-box">
+        <h2>Why Hire Me?</h2>
+        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis.</p>
+        <button class="resume-btn active">Experience</button>
+        <button class="resume-btn">Education</button>
+        <button class="resume-btn">Skills</button>
+        <button class="resume-btn">About Me</button>
+        <button class="resume-btn">Certificates</button>
+      </div>
+      <div class="resume-box">
+        <div class="resume-detail experience active">
+          <h2 class="heading">My <span>Experience</span></h2>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p class="year">2023 - Present</p>
+              <h3>Frontend Devloper</h3>
+              <p class="company">Abc Corp.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022 - 2023</p>
+              <h3>Full Stack Devloper</h3>
+              <p class="company">Google</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2021 - 2022</p>
+              <h3>Backend Devloper</h3>
+              <p class="company">Youtube</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2020 - 2021</p>
+              <h3>Frontend Devloper</h3>
+              <p class="company">Xyz Inc.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2019 - 2020</p>
+              <h3>UI/UX Designer</h3>
+              <p class="company">Abc Corp.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2018 - 2019</p>
+              <h3>Junior Devloper</h3>
+              <p class="company">Xyz Corp.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="resume-detail education">
+          <h2 class="heading">My <span>Education</span></h2>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p class="year">2024</p>
+              <h3>Programming Course</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022 - 2023</p>
+              <h3>Web Development Bootcamp</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2024</p>
+              <h3>Programming Course</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2024</p>
+              <h3>Programming Course</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2024</p>
+              <h3>Programming Course</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2024</p>
+              <h3>Programming Course</h3>
+              <p class="company">Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="resume-detail skills">
+          <h2 class="heading">My <span>Skills</span></h2>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <i class="bx bxl-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-css3"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-javascript"></i>
+              <span>Javascript</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-react"></i>
+              <span>React.js</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-vuejs"></i>
+              <span>Vue.js</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-tailwind-css"></i>
+              <span>Tailwind CSS</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-nodejs"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="resume-item">
+              <i class="bx bxl-mongodb"></i>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+        <div class="resume-detail about">
+          <h2 class="heading">About <span>Me</span></h2>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p>Name <span>Alaa</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Gender <span>Male</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Age <span>20 Years old</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Status <span>Single</span></p>
+            </div>
+            <div class="resume-item">
+              <p>City <span>losenglos</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Nationality <span>losenglos</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Experience <span>1+ Years</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Full Time <span>Available</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Freelance <span>Available</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Phone <span>(+963) 356 678 910</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Email <span>a@gmail.com</span></p>
+            </div>
+            <div class="resume-item">
+              <p>Languages <span>Arabic, English</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="resume-detail certificates">
+          <h2 class="heading">My <span>Certificates</span></h2>
+          <p class="desc">Here are my certificates along with the year and a short description for each.</p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">ICDL</h3>
+              <p class="description">Certification in computer skills and digital literacy, covering essential software and IT fundamentals.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">EXCEL ADVANCED</h3>
+              <p class="description">Advanced Excel techniques including data analysis, pivot tables, and macros.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">OFFICE MANAGEMENT</h3>
+              <p class="description">Training in effective office organization, resource management, and workflow optimization.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">WORDPRESS</h3>
+              <p class="description">Expertise in setting up, customizing, and managing WordPress websites.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">WEB EDITING</h3>
+              <p class="description">Skills in website content editing, layout adjustments, and user experience optimization.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">IMAGE EDITING</h3>
+              <p class="description">Proficiency in photo retouching and graphic adjustments using industry-standard software.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">CYBERSECURITY</h3>
+              <p class="description">Fundamentals of cybersecurity, risk assessment, and protection techniques against cyber threats.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">DIGITAL SKILLS</h3>
+              <p class="description">Broad training on digital tools and modern technology practices for professional environments.</p>
+            </div>
+            <div class="resume-item">
+              <p class="year">2022</p>
+              <h3 class="namecert">GENERAL ENGLISH</h3>
+              <p class="description">Certification that validates proficiency in the English language for professional communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- bars background -->
+  <!-- portfolio section -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Projects</span></h2>
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <div class="home-detail">
-          <h1>Alaa Alfarraj</h1>
-          <h2>I'm a <span id="typed-text"></span></h2>
-          <p>
-            I am a programmer, graphic designer, cybersecurity specialist, and video
-            editor. My diverse skill set allows me to approach projects with a unique
-            perspective, combining technical precision with artistic vision to create
-            impactful digital experiences.
+    <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all" aria-label="Show all projects">
+            <span class="btn-text">All</span>
+            <span class="btn-border"></span>
+        </button>
+        <button class="filter-btn" data-filter="frontend" aria-label="Filter frontend projects">
+            <span class="btn-text">Frontend</span>
+            <span class="btn-border"></span>
+        </button>
+        <button class="filter-btn" data-filter="graphic-design" aria-label="Filter graphic design projects">
+            <span class="btn-text">Graphic Design</span>
+            <span class="btn-border"></span>
+        </button>
+        <button class="filter-btn" data-filter="video" aria-label="Filter video projects">
+            <span class="btn-text">Video</span>
+            <span class="btn-border"></span>
+        </button>
+    </div>
+
+    <div class="portfolio-grid">
+        <!-- Frontend Project 1 -->
+        <div class="project-card" data-category="frontend">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio1.jpg" alt="E-commerce Platform" loading="lazy">
+                        <div class="project-badge">Frontend</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">E-commerce Platform</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-calendar"></i>
+                                        <span>Q2 2024</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>80 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Full-featured e-commerce solution with React 18 and Redux Toolkit,
+                                    integrated with Stripe payment gateway.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-code-alt"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-react"></i>
+                                        <span>React 18</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-typescript"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-code-curly"></i>
+                                        <span>Redux Toolkit</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-stripe"></i>
+                                        <span>Stripe API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>Live Demo</span>
+                                        <i class="bx bx-arrow-to-right"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Source Code</span>
+                                        <i class="bx bx-code-block"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend Project 2 -->
+        <div class="project-card" data-category="frontend">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio4.jpg" alt="Task Management App" loading="lazy">
+                        <div class="project-badge">Frontend</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Task Manager Pro</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-calendar"></i>
+                                        <span>Q1 2024</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>60 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Collaborative task management system with real-time updates
+                                    and drag-and-drop functionality.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-task"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-vuejs"></i>
+                                        <span>Vue 3</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-firebase"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-drag-drop"></i>
+                                        <span>DnD Kit</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>Live Demo</span>
+                                        <i class="bx bx-arrow-to-right"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Source Code</span>
+                                        <i class="bx bx-code-block"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphic Design Project -->
+        <div class="project-card" data-category="graphic-design">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio2.jpg" alt="Brand Identity Package" loading="lazy">
+                        <div class="project-badge">Graphic Design</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Brand Identity Suite</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-palette"></i>
+                                        <span>Branding</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-layer"></i>
+                                        <span>15 Assets</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Comprehensive brand identity package including logo design,
+                                    typography, and marketing collateral.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-brush"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-adobe"></i>
+                                        <span>Illustrator</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-photoshop"></i>
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-color"></i>
+                                        <span>Color Theory</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>View Case Study</span>
+                                        <i class="bx bx-image-alt"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Brand Guidelines</span>
+                                        <i class="bx bx-book-open"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Project -->
+        <div class="project-card" data-category="video">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio3.jpg" alt="Product Promo Video" loading="lazy">
+                        <div class="project-badge">Video</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Product Launch Video</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-movie-play"></i>
+                                        <span>2.5 Min</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-slideshow"></i>
+                                        <span>30 Shots</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Cinematic product promotion video with motion graphics
+                                    and 3D animation elements.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-video"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-adobe"></i>
+                                        <span>Premiere Pro</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-cube"></i>
+                                        <span>After Effects</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>Color Grading</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>Watch Video</span>
+                                        <i class="bx bx-play-circle"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Behind Scenes</span>
+                                        <i class="bx bx-clapperboard"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- contact section -->
+ <section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-box">
+      <form action="">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="field-box">
+          <div class="input-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="input-group">
+            <label for="subject">Email Subject</label>
+            <input type="text" id="subject" required>
+          </div>
+          <div class="input-group full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- قسم حول واتصال -->
+        <div class="footer-about">
+          <h2>Let's Work Together</h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit fuga iste numquam voluptatem perspiciatis minus, sint mollitia quidem neque?
           </p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <i class="bx bxs-phone"></i>
+              <div class="detail">
+                <p>Phone</p>
+                <p>(+963) 345 678 910</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="bx bxs-envelope"></i>
+              <div class="detail">
+                <p>Email</p>
+                <p>alaaalfarraj@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <i class="bx bxs-map"></i>
+              <div class="detail">
+                <p>Address</p>
+                <p>Homs - Syria</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- قسم الروابط السريعة -->
+        <div class="footer-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- قسم المتابعة والاشتراك -->
+        <div class="footer-newsletter">
+          <h2>Follow & Subscribe</h2>
+          <p>Stay updated with our latest news and projects.</p>
           <div class="btn-sci">
             <div class="sci">
               <a href="#"><i class="bx bxl-github"></i></a>
@@ -50,449 +699,20 @@
               <a href="#"><i class="bx bxl-youtube"></i></a>
             </div>
           </div>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
         </div>
-      </section>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Alaa Alfarraj. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
 
-    <!-- services section -->
-     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-        <div class="services-container">
-            <div class="services-box">
-                <div class="icon">
-                    <i class="bx bx-code"></i>
-                </div>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, aut! Deleniti ut impedit quibusdam nam?</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class="bx bx-palette"></i>
-                </div>
-                <h3>Graphic design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class="bx bx-slideshow"></i>
-                </div>
-                <h3>Video Editing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
-            </div>
-
-            <div class="services-box">
-                <div class="icon">
-                    <i class="bx bx-camera"></i>
-                </div>
-                <h3>Photography</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
-            </div>
-        </div>
-     </section>
-
-    <!-- resume section -->
-    <section class="resume" id="resume">
-        <h2 class="heading">My <span>Resume</span></h2>
-        <div class="resume-container">
-            <div class="resume-box">
-                <h2>Why Hire Me?</h2>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis.</p>
-                <button class="resume-btn active">Experience</button>
-                <button class="resume-btn">Education</button>
-                <button class="resume-btn">Skills</button>
-                <button class="resume-btn">About Me</button>
-                <button class="resume-btn">Certificates</button>
-            </div>
-    
-            <div class="resume-box">
-                <div class="resume-detail experience active">
-                    <h2 class="heading">My <span>Experience</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <p class="year">2023 - Present</p>
-                            <h3>Frontend Devloper</h3>
-                            <p class="company">Abc Corp.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022 - 2023</p>
-                            <h3>Full Stack Devloper</h3>
-                            <p class="company">Google</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2021 - 2022</p>
-                            <h3>Backend Devloper</h3>
-                            <p class="company">Youtube</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2020 - 2021</p>
-                            <h3>Frontend Devloper</h3>
-                            <p class="company">Xyz Inc.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2019 - 2020</p>
-                            <h3>UI/UX Designer</h3>
-                            <p class="company">Abc Corp.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2018 - 2019</p>
-                            <h3>Junior Devloper</h3>
-                            <p class="company">Xyz Corp.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="resume-detail education">
-                    <h2 class="heading">My <span>Education</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>Programming Course</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022 - 2023</p>
-                            <h3>Web Development Bootcamp</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>Programming Course</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>Programming Course</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>Programming Course</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2024</p>
-                            <h3>Programming Course</h3>
-                            <p class="company">Online Course</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, explicabo.</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="resume-detail skills">
-                    <h2 class="heading">My <span>Skills</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <i class="bx bxl-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-css3"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-javascript"></i>
-                            <span>Javascript</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-react"></i>
-                            <span>React.js</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-vuejs"></i>
-                            <span>Vue.js</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-tailwind-css"></i>
-                            <span>Tailwind CSS</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-nodejs"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="resume-item">
-                            <i class="bx bxl-mongodb"></i>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="resume-detail about">
-                    <h2 class="heading">About <span>Me</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam, quae amet et accusantium dolorum voluptas dolor.</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <p>Name <span>Alaa</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Gender <span>Male</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Age <span>20 Years old</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Status <span>Single</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>City <span>losenglos</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Nationality <span>losenglos</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Experience <span>1+ Years</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Full Time <span>Available</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Freelance <span>Available</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Phone <span>(+963) 356 678 910</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Email <span>a@gmail.com</span></p>
-                        </div>
-                        <div class="resume-item">
-                            <p>Languages <span>Arabic, English</span></p>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="resume-detail certificates">
-                    <h2 class="heading">My <span>Certificates</span></h2>
-                    <p class="desc">Here are my certificates along with the year and a short description for each.</p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">ICDL</h3>
-                            <p class="description">Certification in computer skills and digital literacy, covering essential software and IT fundamentals.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">EXCEL ADVANCED</h3>
-                            <p class="description">Advanced Excel techniques including data analysis, pivot tables, and macros.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">OFFICE MANAGEMENT</h3>
-                            <p class="description">Training in effective office organization, resource management, and workflow optimization.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">WORDPRESS</h3>
-                            <p class="description">Expertise in setting up, customizing, and managing WordPress websites.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">WEB EDITING</h3>
-                            <p class="description">Skills in website content editing, layout adjustments, and user experience optimization.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">IMAGE EDITING</h3>
-                            <p class="description">Proficiency in photo retouching and graphic adjustments using industry-standard software.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">CYBERSECURITY</h3>
-                            <p class="description">Fundamentals of cybersecurity, risk assessment, and protection techniques against cyber threats.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">DIGITAL SKILLS</h3>
-                            <p class="description">Broad training on digital tools and modern technology practices for professional environments.</p>
-                        </div>
-                        <div class="resume-item">
-                            <p class="year">2022</p>
-                            <h3 class="namecert">GENERAL ENGLISH</h3>
-                            <p class="description">Certification that validates proficiency in the English language for professional communication.</p>
-                        </div>
-                    </div>
-                </div>
-                
-    
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- portfolio section -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">My <span>Projects</span></h2>
-        <div class="portfolio-grid">
-          <!-- مشروع 1 -->
-          <div class="project-card">
-            <div class="card">
-              <!-- الجهة الأمامية -->
-              <div class="card-front">
-                <img src="images/portfolio1.jpg" alt="Frontend Project">
-                <div class="card-front-overlay">
-                </div>
-              </div>
-              <!-- الجهة الخلفية -->
-              <div class="card-back">
-                <h3>Frontend Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime exercitationem soluta inventore quo culpa sed molestiae in omnis necessitatibus nisi!</p>
-                <div class="tech-stack">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
-                  <span>JavaScript</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="demo"><i class="bx bx-globe"></i> Demo</a>
-                  <a href="#" class="code"><i class="bx bxl-github"></i> Code</a>
-                </div>
-              </div>
-            </div>
-        </div>
-      
-          <!-- مشروع 2 -->
-          <div class="project-card">
-            <div class="card">
-              <!-- الجهة الأمامية -->
-              <div class="card-front">
-                <img src="images/portfolio2.jpg" alt="Backend Project">
-                <div class="card-front-overlay">
-                </div>
-              </div>
-              <!-- الجهة الخلفية -->
-              <div class="card-back">
-                <h3>Backend System</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, error nemo necessitatibus ab cupiditate hic?</p>
-                <div class="tech-stack">
-                  <span>Node.js</span>
-                  <span>Python</span>
-                  <span>MongoDB</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="demo"><i class="bx bx-globe"></i> Demo</a>
-                  <a href="#" class="code"><i class="bx bxl-github"></i> Code</a>
-                </div>
-              </div>
-            </div>
-        </div>
-      
-
-         <!-- مشروع 3 -->
-         <div class="project-card">
-            <div class="card">
-              <!-- الجهة الأمامية -->
-              <div class="card-front">
-                <img src="images/portfolio3.jpg" alt="Frontend Project">
-                <div class="card-front-overlay">
-                </div>
-              </div>
-              <!-- الجهة الخلفية -->
-              <div class="card-back">
-                <h3>Frontend Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, ab.</p>
-                <div class="tech-stack">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
-                  <span>JavaScript</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="demo"><i class="bx bx-globe"></i> Demo</a>
-                  <a href="#" class="code"><i class="bx bxl-github"></i> Code</a>
-                </div>
-              </div>
-            </div>
-        </div>
-
-         <!-- مشروع 4 -->
-         <div class="project-card">
-            <div class="card">
-              <!-- الجهة الأمامية -->
-              <div class="card-front">
-                <img src="images/portfolio4.jpg" alt="Frontend Project">
-                <div class="card-front-overlay">
-                </div>
-              </div>
-              <!-- الجهة الخلفية -->
-              <div class="card-back">
-                <h3>Frontend Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam vel iure dicta et nostrum totam minus voluptatum corporis consectetur neque?</p>
-                <div class="tech-stack">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
-                  <span>JavaScript</span>
-                </div>
-                <div class="project-links">
-                  <a href="#" class="demo"><i class="bx bx-globe"></i> Demo</a>
-                  <a href="#" class="code"><i class="bx bxl-github"></i> Code</a>
-                </div>
-              </div>
-            </div>
-        </div>
-          <!-- يمكنك تكرار بنية المشروع للمزيد من العناصر -->
-        </div>
-      </section>
-      
-
-    <!-- contact section -->
-     <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-box">
-                <h2>Let's Work Togther</h2>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit fuga iste numquam voluptatem perspiciatis minus, sint mollitia quidem neque?</p>
-                <div class="contact-detail">
-                    <i class="bx bxs-phone"></i>
-                    <div class="detail">
-                        <p>Phone</p>
-                        <p>(+963) 345 678 910</p>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <i class="bx bxs-envelope"></i>
-                    <div class="detail">
-                        <p>Email</p>
-                        <p>alaaalfarraj@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <i class="bx bxs-map"></i>
-                    <div class="detail">
-                        <p>Address</p>
-                        <p>Homs - Syria</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-box">
-                <form action="">
-                    <h2 class="heading">Contact <span>Me!</span></h2>
-                    <div class="field-box">
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <input type="tel" placeholder="Phone Number" required>
-                        <input type="text" placeholder="Email Subject" required>
-                        <textarea name="" id="" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-     </section>
-    
-
-    <!-- custom js -->
-    <script src="js/script.js"></script>
+  <!-- custom js -->
+  <script src="js/script.js"></script>
 </body>
-
 </html>
