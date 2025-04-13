@@ -2,167 +2,586 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Chat Interface</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="css/style.css">
+  <title>Portfolio Alaa Alfarraj</title>
+  <!-- boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="app-header">
-    <div class="header-content">
-      <button class="icon-button menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-      <div class="user-avatar">JD</div>
-      <div>
-        <h2 class="contact-name">John Doe</h2>
-        <p class="contact-status"><span class="online-dot"></span> Online</p>
-      </div>
-    </div>
-    <div class="header-actions">
-      <button class="icon-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="1"></circle>
-          <circle cx="12" cy="5" r="1"></circle>
-          <circle cx="12" cy="19" r="1"></circle>
-        </svg>
-      </button>
-    </div>
+  <!-- header -->
+  <header>
+    <a href="#home" class="logo">Alaa.</a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#resume" class="nav-link">Resume</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
   </header>
 
-  <div class="main-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <h2 class="sidebar-title">Conversations</h2>
-        <button class="icon-button new-chat">
-          <i class="fas fa-plus"></i>
-        </button>
+  <!-- home section -->
+  <section class="home" id="home">
+    <div class="home-detail">
+      <h1>Alaa Alfarraj</h1>
+      <h2>I'm a <span id="typed-text"></span></h2>
+      <p>
+        I am a programmer, graphic designer, cybersecurity specialist, and video editor. My diverse skill set allows me to approach projects with a unique perspective, combining technical precision with artistic vision to create impactful digital experiences.
+      </p>
+      <a href="#resume" class="btn">Explore My Work</a>
+    </div>
+  </section>
+  
+  <!-- services section -->
+  <section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-code"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, aut! Deleniti ut impedit quibusdam nam?</p>
       </div>
-      <div class="search-container">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" class="search-input" placeholder="Search messages..." id="searchInput">
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-palette"></i>
+        </div>
+        <h3>Graphic design</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
       </div>
-      <div class="contact-list-container">
-        <ul class="contact-list" id="contactList">
-          <!-- Contacts will be dynamically added here -->
-        </ul>
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-slideshow"></i>
+        </div>
+        <h3>Video Editing</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
       </div>
-    </aside>
+      <div class="services-box">
+        <div class="icon">
+          <i class="bx bx-camera"></i>
+        </div>
+        <h3>Photography</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus culpa at fugiat odit voluptates. At?</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Chat Area -->
-    <main class="chat-container">
-      <div class="chat-header" id="chatHeader">
-        <div class="contact-avatar" id="chatContactAvatar">?</div>
-        <div>
-          <h3 class="contact-name" id="chatContactName">Select a Contact</h3>
-          <p class="contact-status" id="chatContactStatus"></p>
+  <!-- resume section -->
+  <section class="resume" id="resume">
+    <h2 class="heading">My <span>Resume</span></h2>
+    <div class="resume-container">
+  
+      <!-- SIDEBAR -->
+      <div class="resume-box sidebar">
+        <h2>Why Hire Me?</h2>
+        <p class="desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, debitis.
+        </p>
+        <div class="btn-group">
+          <button class="resume-btn active"><i class="bx bx-briefcase"></i>Experience</button>
+          <button class="resume-btn"><i class="bx bx-book"></i>Education</button>
+          <button class="resume-btn"><i class="bx bx-code-alt"></i>Skills</button>
+          <button class="resume-btn"><i class="bx bx-user"></i>About Me</button>
+          <button class="resume-btn"><i class="bx bx-certificate"></i>Certificate</button>
         </div>
       </div>
-      <div class="chat-messages" id="chatMessages">
-        <div class="empty-state">
-          <i class="fas fa-comment-dots"></i>
-          <h3>No conversation selected</h3>
-          <p>Select a contact from the sidebar to start chatting or create a new conversation</p>
-        </div>
-      </div>
-     
-      <!-- Input Area -->
-      <div class="input-container" id="inputContainer">
-        <div class="input-tools">
-          <button class="icon-button" id="attachFile">
-            <i class="fas fa-paperclip"></i>
-          </button>
-          <input type="file" id="fileInput" class="file-input" multiple>
-        </div>
-        <div class="message-input-container">
-          <div class="preview-container hidden" id="previewContainer"></div>
-          <textarea class="message-input" placeholder="Type your message..." id="messageInput" rows="1"></textarea>
-          <button class="emoji-picker-btn" id="emojiPickerBtn">
-            <i class="far fa-smile"></i>
-          </button>
-          <div class="emoji-picker" id="emojiPicker">
-            <div class="emoji-picker-header">
-              <button class="emoji-picker-tab active" data-category="smileys">😀</button>
-              <button class="emoji-picker-tab" data-category="animals">🐻</button>
-              <button class="emoji-picker-tab" data-category="food">🍎</button>
-              <button class="emoji-picker-tab" data-category="activities">⚽</button>
-              <button class="emoji-picker-tab" data-category="objects">💡</button>
+  
+      <!-- MAIN CONTENT -->
+      <div class="resume-box">
+  
+        <!-- EXPERIENCE -->
+        <div class="resume-detail experience active">
+          <h2 class="heading">My <span>Experience</span></h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam.
+          </p>
+          <div class="resume-list timeline">
+            <div class="resume-item">
+              <div class="item-header">
+                <h3>Frontend Developer</h3>
+                <span class="year">2023 – Present</span>
+              </div>
+              <p class="company"><i class="bx bx-building"></i>Abc Corp.</p>
+              <ul class="tasks">
+                <li>Developed responsive UI components for the main dashboard</li>
+                <li>Collaborated with designers to implement smooth animations</li>
+                <li>Optimized page load performance by 30%</li>
+              </ul>
             </div>
-            <div class="emoji-picker-body" id="emojiPickerBody">
-              <!-- Emojis will be loaded here -->
-            </div>
+            <!-- repeat .resume-item for each role -->
           </div>
         </div>
-        <button class="send-button" id="sendButton" disabled>
-          Send
-          <i class="fas fa-paper-plane"></i>
+  
+        <!-- EDUCATION -->
+        <div class="resume-detail education">
+          <h2 class="heading">My <span>Education</span></h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam.
+          </p>
+          <div class="resume-list timeline">
+            <div class="resume-item">
+              <div class="item-header">
+                <h3>Programming Course</h3>
+                <span class="year">2024</span>
+              </div>
+              <p class="company"><i class="bx bx-book-alt"></i>Online Course</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <!-- ... -->
+          </div>
+        </div>
+  
+        <!-- SKILLS -->
+        <div class="resume-detail skills">
+          <h2 class="heading">My <span>Skills</span></h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam.
+          </p>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <i class="bx bxl-html5"></i>
+              <h3>HTML5</h3>
+              <div class="skill-bar"><span style="width:90%"></span></div>
+              <small>90%</small>
+            </div>
+            <div class="skill-item">
+              <i class="bx bxl-css3"></i>
+              <h3>CSS3</h3>
+              <div class="skill-bar"><span style="width:85%"></span></div>
+              <small>85%</small>
+            </div>
+            <div class="skill-item">
+              <i class="bx bxl-javascript"></i>
+              <h3>JavaScript</h3>
+              <div class="skill-bar"><span style="width:80%"></span></div>
+              <small>80%</small>
+            </div>
+            <!-- ... -->
+          </div>
+        </div>
+  
+        <!-- ABOUT ME -->
+        <div class="resume-detail about">
+          <h2 class="heading">About <span>Me</span></h2>
+          <p class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus quos beatae dignissimos aliquam.
+          </p>
+          <div class="about-grid">
+            <div><strong>Name:</strong> Alaa</div>
+            <div><strong>Gender:</strong> Male</div>
+            <div><strong>Age:</strong> 20 Years</div>
+            <div><strong>Status:</strong> Single</div>
+            <div><strong>City:</strong> Losenglos</div>
+            <div><strong>Nationality:</strong> Syrian</div>
+            <div><strong>Experience:</strong> 1+ Years</div>
+            <div><strong>Freelance:</strong> Available</div>
+          </div>
+        </div>
+  
+        <!-- CERTIFICATES -->
+        <div class="resume-detail certificates">
+          <h2 class="heading">My <span>Certificates</span></h2>
+          <p class="desc">
+            Here are my certificates along with the year and a short description.
+          </p>
+          <div class="resume-list timeline">
+            <div class="resume-item">
+              <div class="item-header">
+                <h3 class="namecert">ICDL</h3>
+                <span class="year">2022</span>
+              </div>
+              <p class="description">Certification in computer skills and digital literacy.</p>
+            </div>
+            <!-- ... -->
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- portfolio section -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all" aria-label="Show all projects">
+            <span class="btn-text">All</span>
+            <span class="btn-border"></span>
         </button>
-      </div>
-    </main>
-  </div>
+        <button class="filter-btn" data-filter="frontend" aria-label="Filter frontend projects">
+            <span class="btn-text">Frontend</span>
+            <span class="btn-border"></span>
+        </button>
+        <button class="filter-btn" data-filter="graphic-design" aria-label="Filter graphic design projects">
+            <span class="btn-text">Graphic Design</span>
+            <span class="btn-border"></span>
+        </button>
+        <button class="filter-btn" data-filter="video" aria-label="Filter video projects">
+            <span class="btn-text">Video</span>
+            <span class="btn-border"></span>
+        </button>
+    </div>
 
-  <!-- Modal for Adding/Editing Contact -->
-  <div class="modal" id="contactModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="modalTitle">New Contact</h3>
-        <button class="modal-close" id="closeModal">&times;</button>
-      </div>
-      <div class="form-group">
-        <label for="contactNameInput" class="form-label">Contact Name</label>
-        <input type="text" id="contactNameInput" class="form-control" placeholder="Enter contact name">
-      </div>
-      <div class="form-group">
-        <label for="contactStatusInput" class="form-label">Status</label>
-        <select id="contactStatusInput" class="form-control">
-          <option value="online">Online</option>
-          <option value="offline">Offline</option>
-        </select>
-      </div>
-      <div class="modal-actions">
-        <button class="btn btn-secondary" id="cancelModal">Cancel</button>
-        <button class="btn btn-primary" id="saveContact">Save</button>
+    <div class="portfolio-grid">
+        <!-- Frontend Project 1 -->
+        <div class="project-card" data-category="frontend">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio1.jpg" alt="E-commerce Platform" loading="lazy">
+                        <div class="project-badge">Frontend</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">E-commerce Platform</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-calendar"></i>
+                                        <span>Q2 2024</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>80 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Full-featured e-commerce solution with React 18 and Redux Toolkit,
+                                    integrated with Stripe payment gateway.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-code-alt"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-react"></i>
+                                        <span>React 18</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-typescript"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-code-curly"></i>
+                                        <span>Redux Toolkit</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-stripe"></i>
+                                        <span>Stripe API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="https://alaa-alaa-alaa.github.io/portfolio/" class="demo">
+                                        <span>Live Demo</span>
+                                        <i class="bx bx-arrow-to-right"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Source Code</span>
+                                        <i class="bx bx-code-block"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frontend Project 2 -->
+        <div class="project-card" data-category="frontend">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio4.jpg" alt="Task Management App" loading="lazy">
+                        <div class="project-badge">Frontend</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Task Manager Pro</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-calendar"></i>
+                                        <span>Q1 2024</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>60 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Collaborative task management system with real-time updates
+                                    and drag-and-drop functionality.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-task"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-vuejs"></i>
+                                        <span>Vue 3</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-firebase"></i>
+                                        <span>Firebase</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-drag-drop"></i>
+                                        <span>DnD Kit</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>Live Demo</span>
+                                        <i class="bx bx-arrow-to-right"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Source Code</span>
+                                        <i class="bx bx-code-block"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphic Design Project -->
+        <div class="project-card" data-category="graphic-design">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio2.jpg" alt="Brand Identity Package" loading="lazy">
+                        <div class="project-badge">Graphic Design</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Brand Identity Suite</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-palette"></i>
+                                        <span>Branding</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-layer"></i>
+                                        <span>15 Assets</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Comprehensive brand identity package including logo design,
+                                    typography, and marketing collateral.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-brush"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-adobe"></i>
+                                        <span>Illustrator</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bxl-photoshop"></i>
+                                        <span>Photoshop</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-color"></i>
+                                        <span>Color Theory</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>View Case Study</span>
+                                        <i class="bx bx-image-alt"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Brand Guidelines</span>
+                                        <i class="bx bx-book-open"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Project -->
+        <div class="project-card" data-category="video">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="images/portfolio3.jpg" alt="Product Promo Video" loading="lazy">
+                        <div class="project-badge">Video</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="project-details">
+                            <div class="project-header">
+                                <h3 class="project-title">Product Launch Video</h3>
+                                <div class="project-meta">
+                                    <div class="meta-item">
+                                        <i class="bx bx-movie-play"></i>
+                                        <span>2.5 Min</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <i class="bx bx-slideshow"></i>
+                                        <span>30 Shots</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    Cinematic product promotion video with motion graphics
+                                    and 3D animation elements.
+                                </p>
+                                <div class="divider">
+                                    <div class="divider-line"></div>
+                                    <i class="bx bx-video"></i>
+                                    <div class="divider-line"></div>
+                                </div>
+                                <div class="tech-stack">
+                                    <div class="tech-item">
+                                        <i class="bx bxl-adobe"></i>
+                                        <span>Premiere Pro</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-cube"></i>
+                                        <span>After Effects</span>
+                                    </div>
+                                    <div class="tech-item">
+                                        <i class="bx bx-time"></i>
+                                        <span>Color Grading</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <div class="project-links">
+                                    <a href="#" class="demo">
+                                        <span>Watch Video</span>
+                                        <i class="bx bx-play-circle"></i>
+                                    </a>
+                                    <a href="#" class="code">
+                                        <span>Behind Scenes</span>
+                                        <i class="bx bx-clapperboard"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- contact section -->
+ <section class="contact" id="contact">
+  <h2 class="heading">Let's <span>Connect!</span></h2>
+  <div class="contact-container">
+    <div class="contact-box">
+      <form action="">
+        <h2 class="heading">Start a <span>Conversation!</span></h2>
+        <div class="field-box">
+          <div class="input-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+          </div>
+          <div class="input-group">
+            <label for="subject">Email Subject</label>
+            <input type="text" id="subject" required>
+          </div>
+          <div class="input-group full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- عمود بيانات الاتصال -->
+    <div class="footer-column contact">
+      <h3>Work With Me</h3>
+      <p>Let's create something amazing together. Reach out now!</p>
+      <ul>
+        <li><i class="bx bxs-phone"></i> (+963) 345 678 910</li>
+        <li><i class="bx bxs-envelope"></i> alaaalfarraj@gmail.com</li>
+        <li><i class="bx bxs-map"></i> Homs - Syria</li>
+      </ul>
+    </div>
+    <!-- عمود الروابط السريعة -->
+    <div class="footer-column links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- عمود الاشتراك والمتابعة -->
+    <div class="footer-column subscribe">
+      <h3>Subscribe</h3>
+      <p>Stay updated with our latest news.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social">
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-discord-alt"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
       </div>
     </div>
   </div>
-
-  <!-- Confirmation Modal -->
-  <div class="modal" id="confirmModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Confirm Action</h3>
-        <button class="modal-close" id="closeConfirmModal">&times;</button>
-      </div>
-      <p id="confirmMessage">Are you sure you want to perform this action?</p>
-      <div class="modal-actions">
-        <button class="btn btn-secondary" id="cancelConfirm">Cancel</button>
-        <button class="btn btn-danger" id="confirmAction">Confirm</button>
-      </div>
-    </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Alaa Alfarraj. All rights reserved.</p>
   </div>
+</footer>
 
-  <!-- Notification -->
-  <div class="notification" id="notification">
-    <div class="notification-icon">
-      <i class="fas fa-check"></i>
-    </div>
-    <div class="notification-content">
-      <h4 class="notification-title" id="notificationTitle">Success</h4>
-      <p class="notification-message" id="notificationMessage">Action completed successfully</p>
-    </div>
-    <button class="notification-close" id="closeNotification">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
+  
 
+  <!-- custom js -->
   <script src="js/script.js"></script>
-   
-  </script>
 </body>
 </html>
