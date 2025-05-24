@@ -3,37 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightning Portfolio | Ultra Fast Performance</title>
+    <title>Professional Portfolio | Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Optimized color scheme */
+        /* Modern Color Palette */
         :root {
-            --primary-color: #6e45e2;
-            --secondary-color: #00d2ff;
-            --dark-bg: #0f0c29;
-            --darker-bg: #0a081f;
-            --light-text: rgba(255, 255, 255, 0.9);
-            --lighter-text: #ffffff;
-            --accent-color: #ff7e5f;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --fast-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            
-            /* Resume variables */
-            --bg: rgba(255, 255, 255, 0.05);
-            --bg2: rgba(255, 255, 255, 0.08);
-            --main: var(--primary-color);
-            --white: var(--lighter-text);
-            --text: var(--light-text);
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #f72585;
+            --dark: #1a1a2e;
+            --darker: #16213e;
+            --light: #f8f9fa;
+            --gray: #e9ecef;
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            --fast-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        /* Performance optimized base styles */
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
         }
 
         html {
@@ -42,28 +36,90 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
+            background-color: var(--dark);
+            color: var(--light);
             overflow-x: hidden;
-            will-change: transform, opacity;
         }
 
-        /* Optimized header */
+        section {
+            min-height: 100vh;
+            padding: 10rem 8% 5rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1.5rem 3.5rem;
+            background: var(--gradient);
+            border-radius: 50px;
+            color: var(--light);
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--fast-transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(247, 37, 133, 0.4);
+        }
+
+        /* Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 2rem 5%;
+            padding: 2rem 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background-color: rgba(15, 12, 41, 0.95);
+            background-color: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-            will-change: transform;
+            transition: transform 0.4s ease;
         }
 
         header.hide {
@@ -73,7 +129,7 @@
         .logo {
             font-size: 2.8rem;
             font-weight: 700;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -86,12 +142,18 @@
             font-size: 2.5rem;
         }
 
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a {
-            font-size: 1.8rem;
-            color: var(--light-text);
-            margin-right: 3.5rem;
+            font-size: 1.6rem;
+            color: var(--light);
+            margin-left: 3.5rem;
             position: relative;
-            transition: color 0.3s ease;
+            transition: var(--fast-transition);
             font-weight: 500;
         }
 
@@ -102,7 +164,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             transition: width 0.3s ease;
         }
 
@@ -113,12 +175,12 @@
 
         nav a:hover,
         nav a.active {
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
         #menu-icon {
             font-size: 3.6rem;
-            color: var(--light-text);
+            color: var(--light);
             cursor: pointer;
             display: none;
             transition: transform 0.3s ease;
@@ -128,20 +190,14 @@
             transform: rotate(90deg);
         }
 
-        /* Optimized sections */
-        section {
-            min-height: 100vh;
-            padding: 10rem 5% 5rem;
-            position: relative;
-        }
-
-        /* Performance optimized home section */
+        /* Home Section */
         .home {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 5rem;
             position: relative;
+            overflow: hidden;
         }
 
         .home-content {
@@ -151,10 +207,8 @@
 
         .home-content h1 {
             font-size: 5.5rem;
-            font-weight: 700;
-            line-height: 1.2;
             margin-bottom: 2rem;
-            background: linear-gradient(to right, #fff 20%, var(--primary-color) 40%, var(--accent-color) 60%, #fff 80%);
+            background: linear-gradient(to right, #fff 20%, var(--primary) 40%, var(--accent) 60%, #fff 80%);
             background-size: 200% auto;
             -webkit-background-clip: text;
             background-clip: text;
@@ -172,11 +226,11 @@
             font-size: 3.2rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
         .home-content h3 span {
-            color: var(--accent-color);
+            color: var(--accent);
         }
 
         .typing-text {
@@ -189,19 +243,12 @@
             position: absolute;
             right: -10px;
             animation: blink 0.7s infinite;
-            color: var(--accent-color);
+            color: var(--accent);
         }
 
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
-        }
-
-        .home-content p {
-            font-size: 1.8rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            color: rgba(255, 255, 255, 0.7);
         }
 
         .social-media {
@@ -217,43 +264,22 @@
             width: 4.5rem;
             height: 4.5rem;
             background: transparent;
-            border: 0.2rem solid var(--primary-color);
+            border: 2px solid var(--primary);
             border-radius: 50%;
             font-size: 2.5rem;
-            color: var(--primary-color);
-            transition: all 0.3s ease;
-            will-change: transform;
+            color: var(--primary);
+            transition: var(--fast-transition);
         }
 
         .social-media a:hover {
-            background: var(--fast-gradient);
-            color: var(--lighter-text);
+            background: var(--gradient);
+            color: var(--light);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(110, 69, 226, 0.3);
+            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
             border-color: transparent;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 1.5rem 3.5rem;
-            background: var(--fast-gradient);
-            border-radius: 5rem;
-            color: var(--lighter-text);
-            font-size: 1.8rem;
-            font-weight: 600;
-            letter-spacing: 0.1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 20px rgba(110, 69, 226, 0.3);
-            will-change: transform;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.4);
-        }
-
+        /* Home Image */
         .home-img {
             position: relative;
             width: 40rem;
@@ -263,56 +289,27 @@
             align-items: center;
         }
 
-        .home-img .glowing-circle {
-            position: absolute;
+        .home-img img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .glowing-circle::after {
-            content: '';
-            position: absolute;
-            width: 38rem;
-            height: 38rem;
-            background: var(--darker-bg);
-            border-radius: 50%;
-        }
-
-        .glowing-circle .image {
-            position: relative;
-            width: 36rem;
-            height: 36rem;
-            border-radius: 50%;
+            border: 10px solid rgba(67, 97, 238, 0.2);
+            box-shadow: 0 0 50px rgba(67, 97, 238, 0.3);
             z-index: 1;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
         }
 
-        .image i {
-            font-size: 15rem;
-            background: var(--fast-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Lightweight animation */
-        .glowing-circle .animate-circle {
+        .home-img::before {
+            content: '';
             position: absolute;
             width: 42rem;
             height: 42rem;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             border-radius: 50%;
             animation: circleRotate 20s linear infinite;
             filter: blur(20px);
             opacity: 0.3;
-            will-change: transform;
         }
 
         @keyframes circleRotate {
@@ -324,12 +321,7 @@
             }
         }
 
-        /* Optimized services section */
-        .services {
-            background-color: var(--darker-bg);
-            position: relative;
-        }
-
+        /* Section Headings */
         .heading {
             text-align: center;
             font-size: 4.5rem;
@@ -341,7 +333,7 @@
         }
 
         .heading span {
-            color: var(--accent-color);
+            color: var(--accent);
         }
 
         .heading::after {
@@ -352,8 +344,14 @@
             transform: translateX(-50%);
             width: 8rem;
             height: 0.4rem;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             border-radius: 0.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--darker);
+            position: relative;
         }
 
         .services-container {
@@ -365,25 +363,43 @@
         .services-box {
             background: var(--card-bg);
             border-radius: 1.5rem;
-            padding: 3rem 2.5rem;
+            padding: 4rem 3rem;
             text-align: center;
-            border: 0.2rem solid transparent;
-            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            transition: var(--fast-transition);
             backdrop-filter: blur(5px);
-            will-change: transform;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .services-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(247, 37, 133, 0.1) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: var(--fast-transition);
+        }
+
+        .services-box:hover::before {
+            opacity: 1;
         }
 
         .services-box:hover {
-            border-color: var(--accent-color);
+            border-color: var(--accent);
             transform: translateY(-1rem);
-            box-shadow: 0 15px 35px rgba(110, 69, 226, 0.2);
+            box-shadow: 0 15px 35px rgba(67, 97, 238, 0.2);
         }
 
         .services-box i {
             font-size: 6rem;
-            color: var(--accent-color);
             margin-bottom: 2rem;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -397,91 +413,244 @@
         .services-box h3 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
-        .services-box p {
-            font-size: 1.6rem;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.7);
+        /* Resume Section */
+        .resume {
+            background-color: var(--darker);
+            position: relative;
         }
 
-        /* Optimized skills section */
-        .skills-container {
+        .resume-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            grid-template-columns: 1fr 2fr;
             gap: 3rem;
-        }
-
-        .skill-box {
+            padding: 3rem;
             background: var(--card-bg);
             border-radius: 1.5rem;
-            padding: 3rem;
-            transition: all 0.3s ease;
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(5px);
-            will-change: transform;
         }
 
-        .skill-box:hover {
-            border-color: var(--accent-color);
-            transform: translateY(-1rem);
-            box-shadow: 0 15px 35px rgba(110, 69, 226, 0.2);
+        .resume-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            transition: var(--fast-transition);
         }
 
-        .skill-box h3 {
-            font-size: 2.2rem;
+        .sidebar h2 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar .desc {
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
-            color: var(--lighter-text);
+            line-height: 1.8;
+            font-size: 1.6rem;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .resume-btn {
             display: flex;
             align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--light);
+            border: none;
+            border-radius: 0.8rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: var(--fast-transition);
+            border-left: 3px solid transparent;
         }
 
-        .skill-box h3 i {
-            margin-right: 1rem;
-            color: var(--accent-color);
+        .resume-btn.active,
+        .resume-btn:hover {
+            background: rgba(247, 37, 133, 0.1);
+            border-left: 3px solid var(--accent);
+            color: var(--light);
+        }
+
+        .resume-btn i {
+            font-size: 1.8rem;
+            transition: transform 0.3s;
+        }
+
+        .resume-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        .resume-detail {
+            display: none;
+            height: 60rem;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        /* Custom scrollbar for resume sections */
+        .resume-detail::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .resume-detail::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .resume-detail::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .resume-detail::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        .resume-detail.active {
+            display: block;
+        }
+
+        .resume-item {
+            position: relative;
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary);
+            border-radius: 0.8rem;
+            margin-bottom: 3rem;
+            padding: 2.5rem 2rem;
+            transition: var(--fast-transition);
+        }
+
+        .resume-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--accent);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+
+        .item-header h3 {
+            color: var(--light);
+            font-size: 2rem;
+        }
+
+        .item-header .year {
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .company {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .company i {
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .tasks {
+            list-style: none;
+            padding-left: 1.8rem;
+        }
+
+        .tasks li {
+            position: relative;
+            margin-bottom: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 1.5rem;
+        }
+
+        .tasks li::before {
+            content: '▹';
+            position: absolute;
+            left: -1.8rem;
+            color: var(--accent);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
             gap: 2rem;
         }
 
         .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--card-bg);
             border-radius: 1rem;
-            transition: all 0.3s ease;
-            will-change: transform;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--fast-transition);
         }
 
         .skill-item:hover {
             transform: translateY(-5px);
-            background: rgba(110, 69, 226, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .skill-icon {
+        .skill-item i {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: var(--fast-gradient);
+            background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            margin-bottom: 1rem;
         }
 
-        .skill-name {
+        .skill-item h3 {
+            color: var(--light);
+            margin-bottom: 0.5rem;
             font-size: 1.6rem;
-            font-weight: 500;
-            color: var(--light-text);
-            text-align: center;
         }
 
-        /* Optimized portfolio section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .about-grid div {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 0.8rem;
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .about-grid strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Portfolio Section */
         .portfolio {
-            background-color: var(--darker-bg);
+            background-color: var(--darker);
             position: relative;
         }
 
@@ -498,18 +667,18 @@
             background: rgba(255, 255, 255, 0.05);
             border: none;
             border-radius: 5rem;
-            color: var(--light-text);
+            color: var(--light);
             font-size: 1.6rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--fast-transition);
         }
 
         .filter-btn.active,
         .filter-btn:hover {
-            background: var(--fast-gradient);
-            color: var(--lighter-text);
-            box-shadow: 0 5px 15px rgba(110, 69, 226, 0.3);
+            background: var(--gradient);
+            color: var(--light);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
         }
 
         .portfolio-container {
@@ -522,9 +691,8 @@
             position: relative;
             border-radius: 1.5rem;
             overflow: hidden;
-            height: 25rem;
-            transition: transform 0.3s ease;
-            will-change: transform;
+            height: 35rem;
+            transition: var(--fast-transition);
         }
 
         .portfolio-box img {
@@ -532,11 +700,6 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
-            will-change: transform;
-        }
-
-        .portfolio-box:hover img {
-            transform: scale(1.05);
         }
 
         .portfolio-layer {
@@ -545,33 +708,27 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(15, 12, 41, 0.9), transparent);
+            background: linear-gradient(to top, rgba(26, 26, 46, 0.95), transparent 70%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             padding: 3rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-box:hover .portfolio-layer {
-            transform: translateY(0);
         }
 
         .portfolio-layer h4 {
             font-size: 2.5rem;
-            color: var(--lighter-text);
+            color: var(--light);
             margin-bottom: 1rem;
         }
 
         .portfolio-layer p {
             font-size: 1.6rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
-        .portfolio-layer .project-links {
+        .project-links {
             display: flex;
             gap: 1.5rem;
         }
@@ -582,13 +739,13 @@
             align-items: center;
             width: 5rem;
             height: 5rem;
-            background: var(--primary-color);
+            background: var(--primary);
             border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: var(--fast-transition);
         }
 
         .portfolio-layer a:nth-child(2) {
-            background: var(--accent-color);
+            background: var(--accent);
         }
 
         .portfolio-layer a:hover {
@@ -598,7 +755,7 @@
 
         .portfolio-layer a i {
             font-size: 2.5rem;
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
         .project-tags {
@@ -611,12 +768,11 @@
         .project-tag {
             font-size: 1.2rem;
             padding: 0.5rem 1.2rem;
-            background: rgba(110, 69, 226, 0.2);
+            background: rgba(67, 97, 238, 0.2);
             border-radius: 2rem;
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
-        /* Project categories */
         .project-category {
             position: absolute;
             top: 2rem;
@@ -643,12 +799,12 @@
         }
 
         .video-project {
-            background: rgba(110, 69, 226, 0.2);
-            color: #6e45e2;
-            border: 1px solid #6e45e2;
+            background: rgba(67, 97, 238, 0.2);
+            color: #4361ee;
+            border: 1px solid #4361ee;
         }
 
-        /* Optimized contact section */
+        /* Contact Section */
         .contact form {
             max-width: 70rem;
             margin: 0 auto;
@@ -666,18 +822,18 @@
             width: 100%;
             padding: 1.5rem;
             font-size: 1.6rem;
-            color: var(--lighter-text);
+            color: var(--light);
             background: var(--card-bg);
             border-radius: 0.8rem;
             margin: 0.7rem 0;
-            border: 0.2rem solid transparent;
-            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            transition: var(--fast-transition);
         }
 
         .contact form .input-box input:focus,
         .contact form textarea:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 15px rgba(110, 69, 226, 0.3);
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(247, 37, 133, 0.3);
         }
 
         .contact form .input-box input {
@@ -689,381 +845,10 @@
             height: 20rem;
         }
 
-        .contact form .btn {
-            margin-top: 2rem;
-            cursor: pointer;
-        }
-
-        /* ================ RESUME SECTION ================ */
-        .resume {
-            background-color: var(--darker-bg);
-            position: relative;
-        }
-
-        /* ================ LAYOUT ================ */
-        .resume-container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            padding: 2rem;
-            background: var(--bg);
-            border-radius: 1.5rem;
-            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        .resume-box {
-            background: var(--bg2);
-            border-radius: 1rem;
-            box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.15);
-            padding: 3rem;
-            animation: popIn 0.8s ease forwards;
-        }
-        
-        .resume-list {
-            height: 40rem;
-            overflow: auto;
-            padding: 1rem;
-        }
-        
-        /* ================ SIDEBAR ================ */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .sidebar h2 {
-            font-size: 3.5rem;
-            color: var(--main);
-            margin-bottom: 1rem;
-            animation: slideInLeft 1s ease forwards;
-        }
-        
-        .sidebar .desc {
-            color: var(--text);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-            animation: fadeIn 1.2s ease forwards 0.3s;
-        }
-        
-        /* ================ TABS ================ */
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .resume-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0 1.5rem;
-            height: 5rem;
-            background: linear-gradient(135deg, var(--main), var(--bg2));
-            color: var(--white);
-            border: none;
-            border-radius: 0.8rem;
-            font-size: 1.6rem;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            animation: popIn 0.8s ease forwards;
-        }
-        
-        .resume-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .resume-btn:hover::before {
-            left: 100%;
-        }
-        
-        .resume-btn.active {
-            background: var(--white);
-            color: var(--main);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-            font-weight: 700;
-        }
-        
-        .resume-btn:hover {
-            transform: translateY(-5px);
-        }
-        
-        .resume-btn:hover i {
-            transform: translateX(5px);
-        }
-        
-        .resume-btn i {
-            font-size: 1.8rem;
-            transition: transform 0.3s;
-        }
-        
-        /* ================ HEADINGS ================ */
-        .resume .heading {
-            text-align: left;
-            left: 0;
-            transform: none;
-            margin-bottom: 3rem;
-        }
-        
-        .resume .heading::after {
-            left: 0;
-            transform: none;
-        }
-        
-        /* ================ PANELS ================ */
-        .resume-detail {
-            display: none;
-        }
-        
-        .resume-detail.active {
-            display: block;
-        }
-        
-        /* ================ TIMELINE ITEMS ================ */
-        .resume-item {
-            position: relative;
-            background: var(--bg);
-            border-left: 4px solid var(--main);
-            border-radius: 0.8rem;
-            margin-bottom: 3rem;
-            padding: 2.5rem 2rem;
-            transition: transform 0.4s, box-shadow 0.4s;
-            animation: fadeInUp 0.5s ease forwards;
-            opacity: 0;
-        }
-        
-        .resume-item:hover {
-            transform: translateY(-0.5rem);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-        }
-        
-        /* item-header */
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1rem;
-        }
-        
-        .item-header h3 {
-            color: var(--white);
-            font-size: 2rem;
-        }
-        
-        .item-header .year {
-            background: var(--main);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 1rem;
-            font-size: 1.4rem;
-            text-transform: uppercase;
-        }
-        
-        /* company */
-        .company {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text);
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .company i {
-            font-size: 1.6rem;
-            color: var(--main);
-        }
-        
-        /* ================ TASK LIST ================ */
-        .tasks {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .tasks li {
-            position: relative;
-            padding-left: 1.8rem;
-            margin-bottom: 0.6rem;
-            color: var(--text);
-            line-height: 1.4;
-        }
-        
-        .tasks li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.6rem;
-            width: 0.6rem;
-            height: 0.6rem;
-            background: var(--main);
-            border-radius: 50%;
-        }
-        
-        /* ================ SKILLS GRID ================ */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-item {
-            background: var(--bg);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        .skill-item:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-        }
-        
-        .skill-item i {
-            font-size: 3rem;
-            color: var(--main);
-            margin-bottom: 1rem;
-        }
-        
-        .skill-item h3 {
-            color: var(--white);
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-bar {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 0.5rem;
-            overflow: hidden;
-            height: 0.6rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-bar span {
-            display: block;
-            height: 100%;
-            background: var(--main);
-            transition: width 1s;
-        }
-        
-        .skill-item small {
-            color: var(--text);
-        }
-        
-        /* ================ ABOUT GRID ================ */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        
-        .about-grid div {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
-            border-radius: 0.8rem;
-            font-size: 1.6rem;
-            color: var(--text);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        
-        .about-grid strong {
-            color: var(--main);
-        }
-        
-        /* ================ CERTIFICATES ================ */
-        /* يمكن إعادة استخدام الأنماط من .timeline و .item-header عند الحاجة */
-        
-        /* ================ ANIMATION ================ */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .resume-item:nth-child(1) { animation-delay: 0.1s; }
-        .resume-item:nth-child(2) { animation-delay: 0.2s; }
-        .resume-item:nth-child(3) { animation-delay: 0.3s; }
-        
-        /* ---------- Creative Animations Keyframes ---------- */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-        
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes popIn {
-            from {
-                opacity: 0;
-                transform: scale(0.7);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes rotateIn {
-            from {
-                opacity: 0;
-                transform: rotate(-10deg);
-            }
-            to {
-                opacity: 1;
-                transform: rotate(0deg);
-            }
-        }
-        
-        /* ================ CUSTOM DESC STYLE ================ */
-        p.desc {
-            font-size: 1.6rem;
-            color: var(--text);
-            line-height: 1.6;
-            background-color: rgba(110, 69, 226, 0.1); /* خلفية بنفحة خفيفة من اللون الرئيسي */
-            padding: 1rem 1.5rem;
-            border-left: 4px solid var(--main);
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 2rem;
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        p.desc:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Optimized footer */
+        /* Footer */
         .footer {
-            background: var(--darker-bg);
-            padding: 3rem 5%;
+            background: var(--darker);
+            padding: 3rem 8%;
             text-align: center;
             position: relative;
         }
@@ -1074,36 +859,35 @@
         }
 
         .footer p a {
-            color: var(--accent-color);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
+            transition: var(--fast-transition);
         }
 
         .footer p a:hover {
             text-decoration: underline;
-            color: #00d2ff;
+            color: var(--primary);
         }
 
         .footer-iconTop a {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            padding: 1.5rem;
-            background: var(--fast-gradient);
+            padding: 1rem;
+            background: var(--gradient);
             border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: var(--fast-transition);
             margin-bottom: 2rem;
             position: fixed;
             bottom: 3rem;
             right: 3rem;
             z-index: 100;
-            width: 5.5rem;
-            height: 5.5rem;
-            box-shadow: 0 5px 20px rgba(110, 69, 226, 0.3);
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0 5px 20px rgba(67, 97, 238, 0.3);
             opacity: 0;
             visibility: hidden;
-            will-change: transform;
         }
 
         .footer-iconTop a.show {
@@ -1113,28 +897,49 @@
 
         .footer-iconTop a:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(110, 69, 226, 0.4);
+            box-shadow: 0 10px 25px rgba(247, 37, 133, 0.4);
         }
 
         .footer-iconTop a i {
             font-size: 2.5rem;
-            color: var(--lighter-text);
+            color: var(--light);
         }
 
-        /* Performance optimizations */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
 
-        /* Responsive design */
+        /* Responsive Design */
         @media (max-width: 1200px) {
             html {
                 font-size: 55%;
+            }
+            
+            .home-img {
+                width: 35rem;
+                height: 35rem;
+            }
+            
+            .home-img::before {
+                width: 37rem;
+                height: 37rem;
+            }
+            
+            .resume-container {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1142,35 +947,9 @@
             section {
                 padding: 10rem 3% 5rem;
             }
-
-            .home-img {
-                width: 35rem;
-                height: 35rem;
-            }
-
-            .glowing-circle::after {
-                width: 33rem;
-                height: 33rem;
-            }
-
-            .image {
-                width: 31rem;
-                height: 31rem;
-            }
-
-            .animate-circle {
-                width: 37rem;
-                height: 37rem;
-            }
             
-            /* Resume responsive */
-            .resume-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .resume-list {
-                height: auto;
-                max-height: 40rem;
+            .home-content h1 {
+                font-size: 4.5rem;
             }
         }
 
@@ -1185,8 +964,8 @@
                 left: 0;
                 width: 100%;
                 padding: 1rem 3%;
-                background: var(--dark-bg);
-                border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+                background: var(--dark);
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
                 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
                 display: none;
             }
@@ -1208,30 +987,12 @@
                 gap: 5rem;
             }
 
-            .home-content h1 {
-                font-size: 4.5rem;
-            }
-
-            .home-content h3 {
-                font-size: 2.6rem;
-            }
-
             .home-img {
                 width: 30rem;
                 height: 30rem;
             }
 
-            .glowing-circle::after {
-                width: 28rem;
-                height: 28rem;
-            }
-
-            .image {
-                width: 26rem;
-                height: 26rem;
-            }
-
-            .animate-circle {
+            .home-img::before {
                 width: 32rem;
                 height: 32rem;
             }
@@ -1240,9 +1001,12 @@
                 width: 100%;
             }
             
-            /* Resume responsive */
             .about-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .portfolio-box {
+                height: 30rem;
             }
         }
 
@@ -1256,17 +1020,7 @@
                 height: 25rem;
             }
 
-            .glowing-circle::after {
-                width: 23rem;
-                height: 23rem;
-            }
-
-            .image {
-                width: 21rem;
-                height: 21rem;
-            }
-
-            .animate-circle {
+            .home-img::before {
                 width: 27rem;
                 height: 27rem;
             }
@@ -1282,12 +1036,22 @@
                 right: 2rem;
             }
         }
+
+        /* Performance optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header Design -->
+    <!-- Header -->
     <header>
-        <a href="#" class="logo">FastPortfolio <i class="fas fa-bolt"></i></a>
+        <a href="#" class="logo">Portfolio <i class="fas fa-bolt"></i></a>
         
         <nav>
             <a href="#home" class="active">Home</a>
@@ -1302,410 +1066,424 @@
 
     <!-- Home Section -->
     <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm a <span>Web Developer</span></h1>
-            <h3>I specialize in <span class="typing-text"></span></h3>
-            <p>I create lightning-fast websites with optimized performance and beautiful design. My focus is on delivering the best user experience with minimal load time.</p>
-            
-            <div class="social-media">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+        <div class="container">
+            <div class="home-content">
+                <h1>Hi, I'm a <span>Web Developer</span></h1>
+                <h3>I specialize in <span class="typing-text"></span></h3>
+                <p>I create lightning-fast websites with optimized performance and beautiful design. My focus is on delivering the best user experience with minimal load time.</p>
+                
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                
+                <a href="#" class="btn">Explore my work</a>
             </div>
             
-            <a href="#" class="btn">Download CV</a>
-        </div>
-        
-        <div class="home-img">
-            <div class="glowing-circle">
-                <div class="animate-circle"></div>
-                <div class="image">
-                    <i class="fas fa-user-tie"></i>
-                </div>
+            <div class="home-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Profile Image">
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-        
-        <div class="services-container">
-            <div class="services-box">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>High-performance websites with clean code and optimized assets for fast loading.</p>
-            </div>
+        <div class="container">
+            <h2 class="heading">My <span>Services</span></h2>
             
-            <div class="services-box">
-                <i class="fas fa-paint-brush"></i>
-                <h3>UI/UX Design</h3>
-                <p>Beautiful interfaces with intuitive navigation and optimized user flows.</p>
-            </div>
-            
-            <div class="services-box">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Apps</h3>
-                <p>Cross-platform applications with native performance and smooth animations.</p>
-            </div>
-            
-            <div class="services-box">
-                <i class="fas fa-search-chart"></i>
-                <h3>SEO Optimization</h3>
-                <p>Technical SEO improvements to boost your site's visibility and performance.</p>
-            </div>
-            
-            <div class="services-box">
-                <i class="fas fa-server"></i>
-                <h3>Web Hosting</h3>
-                <p>Optimized hosting solutions with CDN and performance caching.</p>
-            </div>
-            
-            <div class="services-box">
-                <i class="fas fa-tachometer-alt"></i>
-                <h3>Performance Audit</h3>
-                <p>Comprehensive analysis and optimization of your website's speed.</p>
+            <div class="services-container">
+                <div class="services-box">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend</h3>
+                    <p>High-performance websites with clean code and optimized assets for fast loading.</p>
+                </div>
+                
+                <div class="services-box">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Backend</h3>
+                    <p>Beautiful interfaces with intuitive navigation and optimized user flows.</p>
+                </div>
+                
+                <div class="services-box">
+                    <i class="fas fa-film"></i>
+                    <h3>Video Editor</h3>
+                    <p>Professional video editing services with smooth transitions and effects.</p>
+                </div>
+                
+                <div class="services-box">
+                    <i class="fas fa-search-chart"></i>
+                    <h3>Graphic Design</h3>
+                    <p>Technical SEO improvements to boost your site's visibility and performance.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Resume Section -->
     <section class="resume" id="resume">
-        <h2 class="heading">My <span>Resume</span></h2>
-        <div class="resume-container">
+        <div class="container">
+            <h2 class="heading">My <span>Resume</span></h2>
+            <div class="resume-container">
 
-            <!-- SIDEBAR -->
-            <div class="resume-box sidebar">
-                <h2>Why Hire Me?</h2>
-                <p class="desc">
-                    Creative and detail-oriented web developer with 3+ years of experience building responsive websites and web applications. Passionate about clean code and optimized performance.
-                </p>
-                <div class="btn-group">
-                    <button class="resume-btn active"><i class="bx bx-briefcase"></i>Experience</button>
-                    <button class="resume-btn"><i class="bx bx-book"></i>Education</button>
-                    <button class="resume-btn"><i class="bx bx-code-alt"></i>Skills</button>
-                    <button class="resume-btn"><i class="bx bx-user"></i>About Me</button>
-                    <button class="resume-btn"><i class="bx bxs-award"></i>Certificate</button>
-                </div>
-            </div>
-
-            <!-- MAIN CONTENT -->
-            <div class="resume-box">
-
-                <!-- EXPERIENCE -->
-                <div class="resume-detail experience active">
-                    <h2 class="heading">My <span>Experience</span></h2>
+                <!-- SIDEBAR -->
+                <div class="resume-box sidebar">
+                    <h2>Why Hire Me?</h2>
                     <p class="desc">
-                        Professional journey with diverse companies and projects that helped me grow as a developer.
+                        Creative and detail-oriented web developer with 3+ years of experience building responsive websites and web applications. Passionate about clean code and optimized performance.
                     </p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Frontend Developer</h3>
-                                <span class="year">2023 – Present</span>
-                            </div>
-                            <p class="company"><i class="bx bx-building"></i>Tech Solutions Inc.</p>
-                            <ul class="tasks">
-                                <li>Developed responsive UI components for the main dashboard using React and TypeScript</li>
-                                <li>Collaborated with designers to implement smooth animations and transitions</li>
-                                <li>Optimized page load performance by 30% through code splitting and lazy loading</li>
-                                <li>Implemented automated testing with Jest and React Testing Library</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Web Developer</h3>
-                                <span class="year">2021 – 2023</span>
-                            </div>
-                            <p class="company"><i class="bx bx-building"></i>Digital Creative Agency</p>
-                            <ul class="tasks">
-                                <li>Built 15+ WordPress websites with custom themes and plugins</li>
-                                <li>Developed e-commerce solutions using WooCommerce and Shopify</li>
-                                <li>Improved website speed scores by optimizing images and implementing caching</li>
-                                <li>Mentored junior developers and conducted code reviews</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Junior Developer</h3>
-                                <span class="year">2020 – 2021</span>
-                            </div>
-                            <p class="company"><i class="bx bx-building"></i>Freelance Projects</p>
-                            <ul class="tasks">
-                                <li>Created responsive websites using HTML5, CSS3, and JavaScript</li>
-                                <li>Implemented UI designs from Figma and Adobe XD</li>
-                                <li>Worked with clients to understand requirements and deliver solutions</li>
-                                <li>Learned modern frameworks like React and Vue.js</li>
-                            </ul>
-                        </div>
+                    <div class="btn-group">
+                        <button class="resume-btn active"><i class="bx bx-briefcase"></i>Experience</button>
+                        <button class="resume-btn"><i class="bx bx-book"></i>Education</button>
+                        <button class="resume-btn"><i class="bx bx-code-alt"></i>Skills</button>
+                        <button class="resume-btn"><i class="bx bx-user"></i>About Me</button>
+                        <button class="resume-btn"><i class="bx bxs-award"></i>Certificate</button>
                     </div>
                 </div>
 
-                <!-- EDUCATION -->
-                <div class="resume-detail education">
-                    <h2 class="heading">My <span>Education</span></h2>
-                    <p class="desc">
-                        Academic background and continuous learning through courses and certifications.
-                    </p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Computer Science Degree</h3>
-                                <span class="year">2018 – 2022</span>
+                <!-- MAIN CONTENT -->
+                <div class="resume-box">
+
+                    <!-- EXPERIENCE -->
+                    <div class="resume-detail experience active">
+                        <h2 class="heading">My <span>Experience</span></h2>
+                        <p class="desc">
+                            Professional journey with diverse companies and projects that helped me grow as a developer.
+                        </p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Frontend Developer</h3>
+                                    <span class="year">2023 – Present</span>
+                                </div>
+                                <p class="company"><i class="bx bx-building"></i>Tech Solutions Inc.</p>
+                                <ul class="tasks">
+                                    <li>Developed responsive UI components for the main dashboard using React and TypeScript</li>
+                                    <li>Collaborated with designers to implement smooth animations and transitions</li>
+                                    <li>Optimized page load performance by 30% through code splitting and lazy loading</li>
+                                    <li>Implemented automated testing with Jest and React Testing Library</li>
+                                </ul>
                             </div>
-                            <p class="company"><i class="bx bx-book-alt"></i>University of Technology</p>
-                            <p>Specialized in web development and software engineering. Graduated with honors.</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Advanced JavaScript Course</h3>
-                                <span class="year">2021</span>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Web Developer</h3>
+                                    <span class="year">2021 – 2023</span>
+                                </div>
+                                <p class="company"><i class="bx bx-building"></i>Digital Creative Agency</p>
+                                <ul class="tasks">
+                                    <li>Built 15+ WordPress websites with custom themes and plugins</li>
+                                    <li>Developed e-commerce solutions using WooCommerce and Shopify</li>
+                                    <li>Improved website speed scores by optimizing images and implementing caching</li>
+                                    <li>Mentored junior developers and conducted code reviews</li>
+                                </ul>
                             </div>
-                            <p class="company"><i class="bx bx-book-alt"></i>Online Platform</p>
-                            <p>Mastered modern JavaScript concepts including ES6+, async programming, and design patterns.</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>React Specialization</h3>
-                                <span class="year">2022</span>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Junior Developer</h3>
+                                    <span class="year">2020 – 2021</span>
+                                </div>
+                                <p class="company"><i class="bx bx-building"></i>Freelance Projects</p>
+                                <ul class="tasks">
+                                    <li>Created responsive websites using HTML5, CSS3, and JavaScript</li>
+                                    <li>Implemented UI designs from Figma and Adobe XD</li>
+                                    <li>Worked with clients to understand requirements and deliver solutions</li>
+                                    <li>Learned modern frameworks like React and Vue.js</li>
+                                </ul>
                             </div>
-                            <p class="company"><i class="bx bx-book-alt"></i>Coding Academy</p>
-                            <p>Learned React fundamentals, hooks, context API, and performance optimization techniques.</p>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Intern Developer</h3>
+                                    <span class="year">2019 – 2020</span>
+                                </div>
+                                <p class="company"><i class="bx bx-building"></i>Web Solutions Ltd.</p>
+                                <ul class="tasks">
+                                    <li>Assisted in developing and maintaining company websites</li>
+                                    <li>Fixed bugs and implemented small features</li>
+                                    <li>Learned version control with Git</li>
+                                    <li>Participated in code reviews and team meetings</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- SKILLS -->
-                <div class="resume-detail skills">
-                    <h2 class="heading">My <span>Skills</span></h2>
-                    <p class="desc">
-                        Technical skills and proficiency levels in various technologies and tools.
-                    </p>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="bx bxl-html5"></i>
-                            <h3>HTML5</h3>
-                            <div class="skill-bar"><span style="width:95%"></span></div>
-                            <small>95%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-css3"></i>
-                            <h3>CSS3</h3>
-                            <div class="skill-bar"><span style="width:90%"></span></div>
-                            <small>90%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-javascript"></i>
-                            <h3>JavaScript</h3>
-                            <div class="skill-bar"><span style="width:85%"></span></div>
-                            <small>85%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-react"></i>
-                            <h3>React</h3>
-                            <div class="skill-bar"><span style="width:80%"></span></div>
-                            <small>80%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-nodejs"></i>
-                            <h3>Node.js</h3>
-                            <div class="skill-bar"><span style="width:75%"></span></div>
-                            <small>75%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-git"></i>
-                            <h3>Git</h3>
-                            <div class="skill-bar"><span style="width:85%"></span></div>
-                            <small>85%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-figma"></i>
-                            <h3>Figma</h3>
-                            <div class="skill-bar"><span style="width:70%"></span></div>
-                            <small>70%</small>
-                        </div>
-                        <div class="skill-item">
-                            <i class="bx bxl-wordpress"></i>
-                            <h3>WordPress</h3>
-                            <div class="skill-bar"><span style="width:80%"></span></div>
-                            <small>80%</small>
+                    <!-- EDUCATION -->
+                    <div class="resume-detail education">
+                        <h2 class="heading">My <span>Education</span></h2>
+                        <p class="desc">
+                            Academic background and continuous learning through courses and certifications.
+                        </p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Computer Science Degree</h3>
+                                    <span class="year">2018 – 2022</span>
+                                </div>
+                                <p class="company"><i class="bx bx-book-alt"></i>University of Technology</p>
+                                <p>Specialized in web development and software engineering. Graduated with honors.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Advanced JavaScript Course</h3>
+                                    <span class="year">2021</span>
+                                </div>
+                                <p class="company"><i class="bx bx-book-alt"></i>Online Platform</p>
+                                <p>Mastered modern JavaScript concepts including ES6+, async programming, and design patterns.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>React Specialization</h3>
+                                    <span class="year">2022</span>
+                                </div>
+                                <p class="company"><i class="bx bx-book-alt"></i>Coding Academy</p>
+                                <p>Learned React fundamentals, hooks, context API, and performance optimization techniques.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>UI/UX Design Course</h3>
+                                    <span class="year">2020</span>
+                                </div>
+                                <p class="company"><i class="bx bx-book-alt"></i>Design Institute</p>
+                                <p>Learned principles of user interface and experience design, prototyping, and user testing.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ABOUT ME -->
-                <div class="resume-detail about">
-                    <h2 class="heading">About <span>Me</span></h2>
-                    <p class="desc">
-                        Personal information and professional details that define who I am.
-                    </p>
-                    <div class="about-grid">
-                        <div><strong>Name:</strong> John Doe</div>
-                        <div><strong>Gender:</strong> Male</div>
-                        <div><strong>Age:</strong> 26 Years</div>
-                        <div><strong>Status:</strong> Single</div>
-                        <div><strong>City:</strong> San Francisco</div>
-                        <div><strong>Nationality:</strong> American</div>
-                        <div><strong>Experience:</strong> 3+ Years</div>
-                        <div><strong>Freelance:</strong> Available</div>
-                    </div>
-                </div>
-
-                <!-- CERTIFICATES -->
-                <div class="resume-detail certificates">
-                    <h2 class="heading">My <span>Certificates</span></h2>
-                    <p class="desc">
-                        Certifications that validate my skills and knowledge in various domains.
-                    </p>
-                    <div class="resume-list">
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Frontend Development</h3>
-                                <span class="year">2022</span>
+                    <!-- SKILLS -->
+                    <div class="resume-detail skills">
+                        <h2 class="heading">My <span>Skills</span></h2>
+                        <p class="desc">
+                            Technical skills and proficiency levels in various technologies and tools.
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="bx bxl-html5"></i>
+                                <h3>HTML5</h3>
                             </div>
-                            <p class="company"><i class="bx bx-award"></i>Udemy Certification</p>
-                            <p>Completed advanced frontend development course with projects.</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>React Professional</h3>
-                                <span class="year">2021</span>
+                            <div class="skill-item">
+                                <i class="bx bxl-css3"></i>
+                                <h3>CSS3</h3>
                             </div>
-                            <p class="company"><i class="bx bx-award"></i>Coursera</p>
-                            <p>Specialization in React.js and modern frontend architectures.</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="item-header">
-                                <h3>Web Performance</h3>
-                                <span class="year">2023</span>
+                            <div class="skill-item">
+                                <i class="bx bxl-javascript"></i>
+                                <h3>JavaScript</h3>
                             </div>
-                            <p class="company"><i class="bx bx-award"></i>Google Developers</p>
-                            <p>Certification in web performance optimization and auditing.</p>
+                            <div class="skill-item">
+                                <i class="bx bxl-react"></i>
+                                <h3>React</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bx bxl-nodejs"></i>
+                                <h3>Node.js</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bx bxl-git"></i>
+                                <h3>Git</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bx bxl-figma"></i>
+                                <h3>Figma</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bx bxl-wordpress"></i>
+                                <h3>WordPress</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="bx bxl-adobe"></i>
+                                <h3>Photoshop</h3>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-video"></i>
+                                <h3>Premiere Pro</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <!-- ABOUT ME -->
+                    <div class="resume-detail about">
+                        <h2 class="heading">About <span>Me</span></h2>
+                        <p class="desc">
+                            Personal information and professional details that define who I am.
+                        </p>
+                        <div class="about-grid">
+                            <div><strong>Name:</strong> John Doe</div>
+                            <div><strong>Gender:</strong> Male</div>
+                            <div><strong>Age:</strong> 26 Years</div>
+                            <div><strong>Status:</strong> Single</div>
+                            <div><strong>City:</strong> San Francisco</div>
+                            <div><strong>Nationality:</strong> American</div>
+                            <div><strong>Experience:</strong> 3+ Years</div>
+                            <div><strong>Freelance:</strong> Available</div>
+                            <div><strong>Languages:</strong> English, Spanish</div>
+                            <div><strong>Hobbies:</strong> Photography, Hiking</div>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATES -->
+                    <div class="resume-detail certificates">
+                        <h2 class="heading">My <span>Certificates</span></h2>
+                        <p class="desc">
+                            Certifications that validate my skills and knowledge in various domains.
+                        </p>
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Frontend Development</h3>
+                                    <span class="year">2022</span>
+                                </div>
+                                <p class="company"><i class="bx bx-award"></i>Udemy Certification</p>
+                                <p>Completed advanced frontend development course with projects.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>React Professional</h3>
+                                    <span class="year">2021</span>
+                                </div>
+                                <p class="company"><i class="bx bx-award"></i>Coursera</p>
+                                <p>Specialization in React.js and modern frontend architectures.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Web Performance</h3>
+                                    <span class="year">2023</span>
+                                </div>
+                                <p class="company"><i class="bx bx-award"></i>Google Developers</p>
+                                <p>Certification in web performance optimization and auditing.</p>
+                            </div>
+                            <div class="resume-item">
+                                <div class="item-header">
+                                    <h3>Video Editing</h3>
+                                    <span class="year">2020</span>
+                                </div>
+                                <p class="company"><i class="bx bx-award"></i>Adobe Certified</p>
+                                <p>Professional video editing and post-production techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-        
-        <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="design">UI/UX Design</button>
-            <button class="filter-btn" data-filter="video">Mobile Apps</button>
-        </div>
-        
-        <div class="portfolio-container">
-            <div class="portfolio-box" data-category="web">
-                <span class="project-category web-project">Web</span>
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="E-commerce Project">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">E-commerce</span>
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                    </div>
-                    <h4>E-commerce Website</h4>
-                    <p>High-performance online store with optimized product pages and fast checkout.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
+        <div class="container">
+            <h2 class="heading">Latest <span>Projects</span></h2>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="design">Graphic Design</button>
+                <button class="filter-btn" data-filter="video">Video</button>
             </div>
             
-            <div class="portfolio-box" data-category="design">
-                <span class="project-category design-project">Design</span>
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">Branding</span>
-                        <span class="project-tag">Logo</span>
-                        <span class="project-tag">Identity</span>
-                    </div>
-                    <h4>Brand Identity</h4>
-                    <p>Complete brand identity with optimized assets for web and print.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-box" data-category="video">
-                <span class="project-category video-project">Mobile</span>
-                <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Promotional Video">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">iOS</span>
-                        <span class="project-tag">Android</span>
-                        <span class="project-tag">React Native</span>
-                    </div>
-                    <h4>Fitness App</h4>
-                    <p>Cross-platform fitness application with smooth animations and optimized performance.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+            <div class="portfolio-container">
+                <div class="portfolio-box" data-category="web">
+                    <span class="project-category web-project">Web</span>
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="E-commerce Project">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">E-commerce</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <h4>E-commerce Website</h4>
+                        <p>High-performance online store with optimized product pages and fast checkout. Built with React, Node.js, and MongoDB.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="portfolio-box" data-category="web">
-                <span class="project-category web-project">Web</span>
-                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="CMS Project">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">CMS</span>
-                        <span class="project-tag">PHP</span>
-                        <span class="project-tag">MySQL</span>
-                    </div>
-                    <h4>Content Management</h4>
-                    <p>Custom CMS with optimized backend and fast page rendering.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="portfolio-box" data-category="design">
-                <span class="project-category design-project">Design</span>
-                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Print Design">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">Print</span>
-                        <span class="project-tag">Brochure</span>
-                        <span class="project-tag">Layout</span>
-                    </div>
-                    <h4>Print Design</h4>
-                    <p>Marketing materials with optimized assets for both print and digital.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-download"></i></a>
-                        <a href="#"><i class="fab fa-behance"></i></a>
+                
+                <div class="portfolio-box" data-category="design">
+                    <span class="project-category design-project">Design</span>
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">Branding</span>
+                            <span class="project-tag">Logo</span>
+                            <span class="project-tag">Identity</span>
+                        </div>
+                        <h4>Brand Identity</h4>
+                        <p>Complete brand identity with optimized assets for web and print. Created logo, color palette, and brand guidelines.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="portfolio-box" data-category="video">
-                <span class="project-category video-project">Mobile</span>
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Short Film">
-                <div class="portfolio-layer">
-                    <div class="project-tags">
-                        <span class="project-tag">iOS</span>
-                        <span class="project-tag">Android</span>
-                        <span class="project-tag">Flutter</span>
+                
+                <div class="portfolio-box" data-category="video">
+                    <span class="project-category video-project">Video</span>
+                    <img src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Promotional Video">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">Promo</span>
+                            <span class="project-tag">Editing</span>
+                            <span class="project-tag">Motion</span>
+                        </div>
+                        <h4>Promotional Video</h4>
+                        <p>Corporate promotional video with motion graphics and professional editing. Shot on 4K and edited in Premiere Pro.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
-                    <h4>Travel App</h4>
-                    <p>Cross-platform travel application with optimized maps and smooth transitions.</p>
-                    <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                
+                <div class="portfolio-box" data-category="web">
+                    <span class="project-category web-project">Web</span>
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Portfolio Website">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">Portfolio</span>
+                            <span class="project-tag">Responsive</span>
+                            <span class="project-tag">UI/UX</span>
+                        </div>
+                        <h4>Portfolio Website</h4>
+                        <p>Minimalist portfolio website with smooth animations and responsive design. Built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-box" data-category="design">
+                    <span class="project-category design-project">Design</span>
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mobile App Design">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">Mobile</span>
+                            <span class="project-tag">UI/UX</span>
+                            <span class="project-tag">Prototype</span>
+                        </div>
+                        <h4>Mobile App Design</h4>
+                        <p>Fitness mobile application design with interactive prototype. Created in Figma with complete design system.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-figma"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-box" data-category="video">
+                    <span class="project-category video-project">Video</span>
+                    <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Short Film">
+                    <div class="portfolio-layer">
+                        <div class="project-tags">
+                            <span class="project-tag">Film</span>
+                            <span class="project-tag">Editing</span>
+                            <span class="project-tag">Color Grading</span>
+                        </div>
+                        <h4>Short Film</h4>
+                        <p>Creative short film with professional color grading and sound design. Shot on Blackmagic 6K and edited in DaVinci Resolve.</p>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1714,42 +1492,44 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
+        <div class="container">
+            <h2 class="heading">Contact <span>Me</span></h2>
             
-            <div class="input-box">
-                <input type="tel" placeholder="Phone Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            
-            <textarea placeholder="Your Message"></textarea>
-            
-            <button type="submit" class="btn">Send Message</button>
-        </form>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="input-box">
+                    <input type="text" placeholder="Email Subject" required>
+                </div>
+                
+                <textarea placeholder="Your Message" required></textarea>
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        <div class="container">
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fas fa-arrow-up"></i></a>
+            </div>
+            
+            <p>Copyright &copy; 2023 | Designed with <i class="fas fa-heart"></i> by <a href="#">Portfolio</a></p>
         </div>
-        
-        <p>Copyright &copy; 2023 | Designed with <i class="fas fa-heart"></i> by <a href="#">FastPortfolio</a></p>
     </footer>
 
-    <!-- Optimized JavaScript -->
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
     <script>
-        // Efficient typing animation
+        // Typing Animation
         document.addEventListener('DOMContentLoaded', function() {
             const typed = new Typed('.typing-text', {
-                strings: ['Web Development', 'UI/UX Design', 'Mobile Apps', 'Performance Optimization', 'Clean Code'],
+                strings: ['frontend', 'graphic design', 'video editing'],
                 typeSpeed: 50,
                 backSpeed: 30,
                 loop: true
@@ -1873,36 +1653,14 @@
                 });
             });
 
-            // Preload images for better performance
-            function preloadImages() {
-                const images = document.querySelectorAll('img[data-src]');
-                
-                if ('IntersectionObserver' in window) {
-                    const imageObserver = new IntersectionObserver((entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const img = entry.target;
-                                img.src = img.getAttribute('data-src');
-                                img.removeAttribute('data-src');
-                                observer.unobserve(img);
-                            }
-                        });
-                    });
-
-                    images.forEach(img => {
-                        imageObserver.observe(img);
-                    });
-                } else {
-                    // Fallback for browsers without IntersectionObserver
-                    images.forEach(img => {
-                        img.src = img.getAttribute('data-src');
-                        img.removeAttribute('data-src');
-                    });
-                }
-            }
-
-            // Initialize after DOM is loaded
-            preloadImages();
+            // Scroll to top
+            document.querySelector('.footer-iconTop a').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
