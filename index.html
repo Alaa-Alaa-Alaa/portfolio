@@ -190,23 +190,34 @@
             transform: rotate(90deg);
         }
 
-        /* Home Section */
+        /* Home Section - New Design */
         .home {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 5rem;
+            justify-content: center;
             position: relative;
             overflow: hidden;
+            background: radial-gradient(circle at 70% 30%, rgba(67, 97, 238, 0.1) 0%, transparent 50%);
+        }
+
+        .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8rem;
+            width: 100%;
+            max-width: 1400px;
+            position: relative;
         }
 
         .home-content {
-            max-width: 60rem;
-            z-index: 10;
+            flex: 1;
+            position: relative;
+            z-index: 2;
         }
 
         .home-content h1 {
-            font-size: 5.5rem;
+            font-size: 6rem;
             margin-bottom: 2rem;
             background: linear-gradient(to right, #fff 20%, var(--primary) 40%, var(--accent) 60%, #fff 80%);
             background-size: 200% auto;
@@ -214,6 +225,7 @@
             background-clip: text;
             color: transparent;
             animation: shine 3s linear infinite;
+            line-height: 1.1;
         }
 
         @keyframes shine {
@@ -223,7 +235,7 @@
         }
 
         .home-content h3 {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             color: var(--light);
@@ -231,6 +243,7 @@
 
         .home-content h3 span {
             color: var(--accent);
+            position: relative;
         }
 
         .typing-text {
@@ -251,65 +264,128 @@
             50% { opacity: 0; }
         }
 
+        .home-content p {
+            font-size: 1.8rem;
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
         .social-media {
             display: flex;
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .social-media a {
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            width: 4.5rem;
-            height: 4.5rem;
+            width: 5rem;
+            height: 5rem;
             background: transparent;
             border: 2px solid var(--primary);
             border-radius: 50%;
             font-size: 2.5rem;
             color: var(--primary);
             transition: var(--fast-transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-media a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .social-media a:hover::before {
+            width: 100%;
         }
 
         .social-media a:hover {
-            background: var(--gradient);
             color: var(--light);
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.1);
             box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
             border-color: transparent;
         }
 
-        /* Home Image */
+        .home-btns {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient);
+            color: var(--light);
+            border-color: transparent;
+        }
+
+        /* Home Image - New Design */
         .home-img {
             position: relative;
-            width: 40rem;
-            height: 40rem;
+            width: 45rem;
+            height: 45rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-shrink: 0;
         }
 
-        .home-img img {
+        .home-img .profile-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%;
-            border: 10px solid rgba(67, 97, 238, 0.2);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            border: 15px solid rgba(67, 97, 238, 0.2);
             box-shadow: 0 0 50px rgba(67, 97, 238, 0.3);
             z-index: 1;
             position: relative;
+            animation: morph 8s ease-in-out infinite;
+            transition: all 0.5s ease;
+        }
+
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
 
         .home-img::before {
             content: '';
             position: absolute;
-            width: 42rem;
-            height: 42rem;
+            width: 100%;
+            height: 100%;
             background: var(--gradient);
             border-radius: 50%;
             animation: circleRotate 20s linear infinite;
             filter: blur(20px);
             opacity: 0.3;
+            z-index: 0;
+        }
+
+        .home-img::after {
+            content: '';
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            border: 3px dashed var(--primary);
+            border-radius: 50%;
+            animation: circleRotate 30s linear infinite reverse;
+            opacity: 0.2;
         }
 
         @keyframes circleRotate {
@@ -319,6 +395,107 @@
             100% {
                 transform: rotate(360deg);
             }
+        }
+
+        .floating-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        .floating-icon:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            color: var(--primary);
+        }
+
+        .floating-icon:nth-child(2) {
+            top: 20%;
+            right: 15%;
+            animation-delay: 1s;
+            color: var(--accent);
+        }
+
+        .floating-icon:nth-child(3) {
+            bottom: 15%;
+            left: 20%;
+            animation-delay: 2s;
+            color: var(--primary);
+        }
+
+        .floating-icon:nth-child(4) {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 3s;
+            color: var(--accent);
+        }
+
+        .floating-icon:nth-child(5) {
+            top: 50%;
+            left: 5%;
+            animation-delay: 4s;
+            color: var(--primary);
+        }
+
+        /* Stats Section */
+        .home-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            flex: 1;
+            transition: var(--fast-transition);
+            border: 1px solid transparent;
+        }
+
+        .stat-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Section Headings */
@@ -929,13 +1106,8 @@
             }
             
             .home-img {
-                width: 35rem;
-                height: 35rem;
-            }
-            
-            .home-img::before {
-                width: 37rem;
-                height: 37rem;
+                width: 40rem;
+                height: 40rem;
             }
             
             .resume-container {
@@ -949,7 +1121,7 @@
             }
             
             .home-content h1 {
-                font-size: 4.5rem;
+                font-size: 5rem;
             }
         }
 
@@ -981,20 +1153,42 @@
                 text-align: center;
             }
 
-            .home {
+            .home-container {
                 flex-direction: column-reverse;
                 text-align: center;
                 gap: 5rem;
             }
 
             .home-img {
-                width: 30rem;
-                height: 30rem;
+                width: 35rem;
+                height: 35rem;
             }
 
-            .home-img::before {
-                width: 32rem;
-                height: 32rem;
+            .home-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .home-content p {
+                text-align: center;
+            }
+
+            .home-btns {
+                justify-content: center;
+            }
+
+            .social-media {
+                justify-content: center;
+            }
+
+            .home-stats {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stat-item {
+                min-width: 15rem;
             }
 
             .contact form .input-box input {
@@ -1016,13 +1210,16 @@
             }
 
             .home-img {
-                width: 25rem;
-                height: 25rem;
+                width: 30rem;
+                height: 30rem;
             }
 
-            .home-img::before {
-                width: 27rem;
-                height: 27rem;
+            .home-content h1 {
+                font-size: 4rem;
+            }
+
+            .home-content h3 {
+                font-size: 2.8rem;
             }
 
             .portfolio-container {
@@ -1064,13 +1261,13 @@
         <div id="menu-icon"><i class="fas fa-bars"></i></div>
     </header>
 
-    <!-- Home Section -->
+    <!-- Home Section - New Design -->
     <section class="home" id="home">
-        <div class="container">
+        <div class="home-container">
             <div class="home-content">
-                <h1>Hi, I'm a <span>Web Developer</span></h1>
-                <h3>I specialize in <span class="typing-text"></span></h3>
-                <p>I create lightning-fast websites with optimized performance and beautiful design. My focus is on delivering the best user experience with minimal load time.</p>
+                <h1>Hi, I'm <span>John Doe</span></h1>
+                <h3>Professional <span class="typing-text"></span></h3>
+                <p>I'm a passionate web developer with 5+ years of experience creating high-performance websites and applications. My focus is on delivering exceptional user experiences with clean, efficient code.</p>
                 
                 <div class="social-media">
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1079,11 +1276,36 @@
                     <a href="#"><i class="fab fa-github"></i></a>
                 </div>
                 
-                <a href="#" class="btn">Explore my work</a>
+                <div class="home-btns">
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Work</a>
+                </div>
+
+                <div class="home-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
             </div>
             
             <div class="home-img">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Profile Image">
+                <div class="floating-icons">
+                    <i class="fab fa-html5 floating-icon"></i>
+                    <i class="fab fa-css3-alt floating-icon"></i>
+                    <i class="fab fa-js floating-icon"></i>
+                    <i class="fab fa-react floating-icon"></i>
+                    <i class="fab fa-node floating-icon"></i>
+                </div>
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Profile Image" class="profile-img">
             </div>
         </div>
     </section>
@@ -1529,7 +1751,7 @@
         // Typing Animation
         document.addEventListener('DOMContentLoaded', function() {
             const typed = new Typed('.typing-text', {
-                strings: ['frontend', 'graphic design', 'video editing'],
+                strings: ['Web Developer', 'UI/UX Designer', 'Video Editor'],
                 typeSpeed: 50,
                 backSpeed: 30,
                 loop: true
